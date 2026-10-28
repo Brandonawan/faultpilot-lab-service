@@ -1,0 +1,3 @@
+import LabShell from "@/components/LabShell";
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+export default async function Slow({searchParams}){const params=await searchParams;const ms=Math.min(Math.max(Number(params.ms)||3000,0),15000);await wait(ms);return <LabShell><p className="eyebrow">Slow document regression</p><h1 data-testid="slow-page-ready">Slow, but working.</h1><p className="lead">This document intentionally waited {ms.toLocaleString()} ms before rendering. A successful runner should not classify it as down.</p><div className="notice success">Document response completed successfully.</div></LabShell>}

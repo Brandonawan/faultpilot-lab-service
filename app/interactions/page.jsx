@@ -1,0 +1,2 @@
+import LabShell from "@/components/LabShell";import Interactions from "@/components/Interactions";
+export default async function Page({searchParams}){const params=await searchParams;return <LabShell><p className="eyebrow">Dynamic UI regression</p><h1>Interact with realistic controls.</h1><p className="lead">The changed variant deliberately removes the actionable save target.</p><div style={{marginTop:28}}><Interactions changed={params.variant==="changed"}/></div></LabShell>}

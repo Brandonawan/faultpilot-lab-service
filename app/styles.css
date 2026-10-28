@@ -1,0 +1,48 @@
+:root { color-scheme: light; --ink:#17192b; --muted:#667085; --line:#e2e5ec; --purple:#5115f7; --green:#16803a; --red:#d92d20; --bg:#f5f7fb; }
+* { box-sizing:border-box; }
+html { font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); }
+body { margin:0; }
+a { color:inherit; }
+button,input,select,textarea { font:inherit; }
+button { cursor:pointer; }
+.shell { min-height:100vh; }
+.nav { height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 28px; background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:10; }
+.brand { display:flex; align-items:center; gap:10px; font-weight:800; text-decoration:none; }
+.mark { width:30px; height:30px; border-radius:50%; border:6px solid var(--purple); border-right-color:#f5c542; border-bottom-color:#23a455; }
+.navlinks { display:flex; gap:18px; align-items:center; }
+.navlinks a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:650; }
+.main { width:min(1120px,calc(100% - 32px)); margin:0 auto; padding:44px 0 70px; }
+.eyebrow { color:var(--purple); font-size:12px; text-transform:uppercase; letter-spacing:.15em; font-weight:800; }
+h1 { margin:10px 0 0; font-size:clamp(34px,6vw,62px); line-height:1.04; letter-spacing:-.045em; }
+h2,h3,p { margin-top:0; }
+.lead { max-width:720px; color:var(--muted); font-size:18px; line-height:1.7; margin:18px 0 0; }
+.hero-actions,.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.button { min-height:44px; border-radius:11px; padding:0 17px; border:1px solid var(--line); display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#fff; color:var(--ink); text-decoration:none; font-weight:750; }
+.button.primary { background:var(--purple); color:#fff; border-color:var(--purple); }
+.button.danger { background:#fff1f0; color:var(--red); border-color:#ffc9c5; }
+.button:disabled { opacity:.5; cursor:not-allowed; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:38px; }
+.card { background:#fff; border:1px solid var(--line); border-radius:17px; padding:22px; box-shadow:0 10px 30px rgba(21,24,40,.04); }
+.card h2,.card h3 { margin-bottom:8px; }
+.card p { color:var(--muted); line-height:1.55; }
+.tag { display:inline-flex; border-radius:999px; background:#f0ebff; color:var(--purple); padding:5px 9px; font-size:11px; font-weight:800; }
+.panel { max-width:650px; margin:28px auto 0; background:#fff; border:1px solid var(--line); border-radius:18px; padding:28px; box-shadow:0 18px 55px rgba(21,24,40,.07); }
+.field { display:grid; gap:7px; margin-top:16px; font-size:13px; font-weight:700; }
+.field input,.field select,.field textarea { width:100%; min-height:46px; border:1px solid #cfd4df; border-radius:10px; padding:10px 12px; background:#fff; color:var(--ink); }
+.field textarea { min-height:100px; resize:vertical; }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.notice { margin-top:18px; border-radius:11px; padding:13px 15px; font-size:14px; line-height:1.5; }
+.success { background:#eaf8ef; color:#116b31; border:1px solid #bfe9cc; }
+.error { background:#fff1f0; color:#a51d14; border:1px solid #ffc9c5; }
+.muted { color:var(--muted); }
+.scenario-list { display:grid; gap:15px; margin-top:28px; }
+.scenario { display:flex; justify-content:space-between; gap:20px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:15px; padding:19px 21px; }
+.scenario p { margin:5px 0 0; color:var(--muted); font-size:14px; }
+.scenario code { font-size:12px; color:var(--purple); }
+.steps { display:flex; gap:8px; margin-bottom:24px; }
+.step { flex:1; height:5px; border-radius:99px; background:#e8eaf0; }
+.step.active { background:var(--purple); }
+.todo { display:flex; align-items:center; gap:10px; padding:11px 0; border-bottom:1px solid var(--line); }
+.split { display:grid; grid-template-columns:1.4fr .6fr; gap:20px; }
+.price { font-size:30px; font-weight:800; }
+@media (max-width:800px) { .grid,.split { grid-template-columns:1fr; } .navlinks a:not(.button) { display:none; } .row { grid-template-columns:1fr; } }

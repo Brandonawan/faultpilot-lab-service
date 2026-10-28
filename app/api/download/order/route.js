@@ -1,0 +1,1 @@
+export async function GET(){const csv="order_id,item,status,total_currency,total_amount\nFP-LAB-1001,Browser Monitor Trial,completed,NGN,100.00\n";return new Response(csv,{headers:{"Content-Type":"text/csv; charset=utf-8","Content-Disposition":"attachment; filename=fp-lab-order.csv","Cache-Control":"no-store"}})}

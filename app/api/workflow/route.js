@@ -1,0 +1,1 @@
+export async function POST(request){const body=await request.json().catch(()=>({}));if(body.outcome==="error")return Response.json({ok:false,detail:"The lab application rejected the workflow."},{status:422});return Response.json({ok:true,id:"workflow-lab-1001",state:"completed"},{headers:{"Cache-Control":"no-store"}})}

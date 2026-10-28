@@ -1,0 +1,2 @@
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+export async function GET(request){const url=new URL(request.url);const status=Math.min(Math.max(Number(url.searchParams.get("status"))||500,200),599);const delay=Math.min(Math.max(Number(url.searchParams.get("delay"))||0,0),60000);if(delay)await wait(delay);return Response.json({ok:status<400,status,scenario:"faultpilot-lab-controlled-response",delay_ms:delay},{status,headers:{"Cache-Control":"no-store","X-FaultPilot-Lab":"controlled"}})}

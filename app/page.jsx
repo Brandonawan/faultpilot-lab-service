@@ -1,0 +1,6 @@
+import Link from "next/link";
+import LabShell from "@/components/LabShell";
+
+export default function Home() {
+  return <LabShell><section><p className="eyebrow">Deterministic regression target</p><h1>A small SaaS built to prove browser monitoring is reliable.</h1><p className="lead">FaultPilot Lab provides stable customer journeys, controlled failures, authentication challenges, downloads, popups, dynamic controls and API outcomes for recorder and runner benchmarks.</p><div className="hero-actions"><Link className="button primary" href="/scenarios">Open scenario catalog</Link><Link className="button" href="/auth/login">Run the canonical journey</Link></div></section><section className="grid"><article className="card"><span className="tag">ISOLATED</span><h2>Per-run state</h2><p>Scenarios use signed cookies and URL configuration instead of unreliable server memory.</p></article><article className="card"><span className="tag">REPEATABLE</span><h2>Known outcomes</h2><p>Every success and failure has a stable assertion suitable for permanent regression tests.</p></article><article className="card"><span className="tag">DEPLOYABLE</span><h2>One Next.js app</h2><p>Run locally or deploy directly to Vercel without a separate database or worker.</p></article></section></LabShell>;
+}

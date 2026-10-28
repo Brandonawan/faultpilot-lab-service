@@ -1,0 +1,2 @@
+import LabShell from "@/components/LabShell"; import MfaForm from "@/components/MfaForm"; import { LAB_TOTP_SECRET } from "@/lib/lab-config";
+export default function Mfa(){return <LabShell><div className="panel"><p className="eyebrow">TOTP regression</p><h1 style={{fontSize:38}}>Authenticator verification</h1><p className="muted">Configure FaultPilot’s Generate and enter TOTP step with this permanent Base32 setup secret.</p><div className="notice success"><code data-testid="totp-secret">{LAB_TOTP_SECRET}</code></div><MfaForm/></div></LabShell>}

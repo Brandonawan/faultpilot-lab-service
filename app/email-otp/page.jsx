@@ -1,0 +1,2 @@
+import LabShell from "@/components/LabShell";import EmailOtpForm from "@/components/EmailOtpForm";
+export default function EmailOtp(){return <LabShell><div className="panel"><p className="eyebrow">Synthetic inbox regression</p><h1 style={{fontSize:38}}>Verify an email OTP</h1><p className="muted">Use a permanent or execution-scoped FaultPilot synthetic inbox. Email delivery requires RESEND_API_KEY.</p><EmailOtpForm/></div></LabShell>}

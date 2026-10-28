@@ -1,0 +1,1 @@
+export default function Child(){return <main className="main"><div className="panel"><p className="eyebrow">Popup window</p><h1 data-testid="popup-heading" style={{fontSize:38}}>Verification complete</h1><p className="notice success">The new browser context loaded successfully. The runner may now close this browser context.</p></div></main>}
